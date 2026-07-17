@@ -1,0 +1,295 @@
+/* About.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+
+/* Main Card */
+
+.about-card {
+  background: rgba(30, 41, 59, 0.95);
+  padding: 50px;
+  border-radius: 25px;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  animation: fadeIn 0.8s ease;
+}
+
+
+/* Heading */
+
+.about-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.about-heading h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-heading h1 span {
+  color: #38bdf8;
+}
+
+.intro {
+  color: #94a3b8;
+  font-size: 20px;
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+
+/* Text Section */
+
+.about-text p {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.about-text strong {
+  color: #38bdf8;
+}
+
+
+/* Sections Heading */
+
+.journey-section,
+.skill-section {
+  margin-top: 45px;
+}
+
+.journey-section h2,
+.skill-section h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+
+/* Journey Cards */
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+.journey-box {
+
+  background: #172554;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: .3s;
+}
+
+
+.journey-box:hover {
+
+  transform: translateY(-8px);
+  background: #1e3a8a;
+  box-shadow: 0 15px 30px rgba(56,189,248,.2);
+
+}
+
+
+.journey-box h3 {
+
+  color:#38bdf8;
+  margin-bottom:15px;
+  font-size:21px;
+
+}
+
+
+.journey-box p {
+
+  color:#dbeafe;
+  line-height:1.7;
+  font-size:15px;
+
+}
+
+
+/* Skills */
+
+.skills {
+
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+
+}
+
+
+.skills span {
+
+  background:#2563eb;
+  color:white;
+  padding:10px 18px;
+  border-radius:30px;
+  font-size:14px;
+  transition:.3s;
+}
+
+
+.skills span:hover {
+
+  background:#38bdf8;
+  color:#0f172a;
+  transform:translateY(-4px);
+
+}
+
+
+/* Button */
+
+.about-action {
+
+  text-align:center;
+  margin-top:50px;
+
+}
+
+
+.home-btn {
+
+  display:inline-block;
+  text-decoration:none;
+  background:linear-gradient(
+    135deg,
+    #38bdf8,
+    #0ea5e9
+  );
+
+  color:#0f172a;
+  padding:15px 40px;
+  border-radius:40px;
+  font-size:17px;
+  font-weight:600;
+  transition:.3s;
+  box-shadow:0 10px 25px rgba(56,189,248,.3);
+
+}
+
+
+.home-btn:hover {
+
+  transform:translateY(-5px);
+  color:white;
+  box-shadow:0 15px 35px rgba(56,189,248,.5);
+
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity:0;
+    transform:translateY(30px);
+
+  }
+
+  to {
+
+    opacity:1;
+    transform:translateY(0);
+
+  }
+
+}
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  .journey-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .about-card{
+
+    padding:35px 25px;
+
+  }
+
+
+  .about-heading h1{
+
+    font-size:40px;
+
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .about{
+
+    padding:50px 15px;
+
+  }
+
+
+  .about-heading h1{
+
+    font-size:34px;
+
+  }
+
+
+  .intro{
+
+    font-size:16px;
+
+  }
+
+
+  .about-text p{
+
+    font-size:15px;
+
+  }
+
+
+  .home-btn{
+
+    width:100%;
+    text-align:center;
+
+  }
+
+}
