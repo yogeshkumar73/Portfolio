@@ -20,11 +20,14 @@ function Contact() {
           </p>
         </header>
 
+
         {/* Main Content */}
         <div className="contact-content">
 
+
           {/* Contact Card */}
           <article className="contact-card">
+
             <h2>Let's Connect</h2>
 
             <p>
@@ -32,6 +35,7 @@ function Contact() {
               I would be happy to discuss development ideas,
               internships, freelance work, and collaborations.
             </p>
+
 
             <div className="contact-info">
 
@@ -47,7 +51,10 @@ function Contact() {
                   <h3>Phone</h3>
                   <p>+91 7379307099</p>
                 </div>
+
               </a>
+
+
 
               {/* Email */}
               <a
@@ -55,13 +62,17 @@ function Contact() {
                 className="info-box"
                 aria-label="Send email to Yogesh Kumar"
               >
+
                 <span aria-hidden="true">📧</span>
 
                 <div>
                   <h3>Email</h3>
                   <p>yogeshkumar737@gmail.com</p>
                 </div>
+
               </a>
+
+
 
               {/* GitHub */}
               <a
@@ -71,69 +82,120 @@ function Contact() {
                 className="info-box"
                 aria-label="Visit GitHub Profile"
               >
+
                 <span aria-hidden="true">💻</span>
 
                 <div>
                   <h3>GitHub</h3>
                   <p>github.com/yogeshkumar73</p>
                 </div>
+
               </a>
 
+
             </div>
+
           </article>
+
+
 
           {/* Profile Card */}
           <section className="profile-card">
+
             <h2>Developer Profile</h2>
 
-            <p>
-              <strong>Name:</strong> Yogesh Kumar
-            </p>
 
-            <p>
-              <strong>Role:</strong> Aspiring AI & Machine Learning Engineer
-            </p>
+            <div className="profile-details">
 
-            <p>
-              <strong>Skills:</strong> Python Developer, Full-Stack Developer
-            </p>
+              <p>
+                <strong>Name:</strong> Yogesh Kumar
+              </p>
 
-            <p>
-              <strong>Education:</strong> BCA - Bundelkhand University, Jhansi
-            </p>
+
+              <p>
+                <strong>Role:</strong> AI & Machine Learning Engineer
+              </p>
+
+
+              <p>
+                <strong>Expertise:</strong> Python Developer | Full-Stack Developer
+              </p>
+
+
+              <p>
+                <strong>Education:</strong> BCA - Bundelkhand University, Jhansi
+              </p>
+
+            </div>
+
+
 
             <div className="skills">
+
               <span>Python</span>
               <span>React.js</span>
               <span>Node.js</span>
               <span>JavaScript</span>
               <span>SQL</span>
               <span>Machine Learning</span>
+
             </div>
+
+
           </section>
 
+
         </div>
+
+
 
         {/* Buttons */}
-        <div className="contact-buttons">
 
+        <div
+          className="hero-buttons"
+          style={{
+            marginTop: "40px",
+            justifyContent: "center",
+            gap: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+
+
+          {/* Email Feedback */}
           <a
-            href="mailto:yogeshkumar737@gmail.com"
+            href="mailto:yogeshkumar737@gmail.com?subject=Portfolio%20Feedback&body=Hello%20Yogesh,%0A%0AI%20would%20like%20to%20share%20my%20feedback:%0A%0A"
             className="email-btn"
-            aria-label="Send Email"
+            aria-label="Send Feedback via Email"
           >
-            ✉ Send Email
+            ✉ Send Feedback
           </a>
 
+
+
+          {/* Back Home */}
           <Link
             to="/"
-            className="home-btn"
+            className="secondary-btn"
             aria-label="Go back to Home Page"
           >
-            🏠 Back to Home
+            ⬅ Back Home
           </Link>
 
+
+
+          {/* Next Page */}
+          <Link
+            to="/about"
+            className="primary-btn"
+            aria-label="Go to About Page"
+          >
+            Next Page ➜ About
+          </Link>
+
+
         </div>
+
 
       </div>
     </section>

@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Resume.css";
 
 function Resume() {
+  const navigate = useNavigate();
   return (
     <section className="resume">
       <div className="resume-container">
@@ -70,12 +71,21 @@ function Resume() {
   </a>
 
 
-  <Link 
-    to="/" 
-    className="home-btn"
+ {/* <div className="hero-buttons" style={{ marginTop: "40px", justifyContent: "center" }}> */}
+
+  <button
+    className="secondary-btn"
+    onClick={() => navigate("/education")}
   >
-    🏠 Back to Home
-  </Link>
+    ⬅ Back Education
+  </button>
+
+  <button
+    className="primary-btn"
+    onClick={() => navigate("/blog")}
+  >
+    Next Page ➜ Blog
+  </button>
 
 </div>
 

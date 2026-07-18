@@ -132,15 +132,17 @@ function About() {
           </div>
 
 
-          <div className="about-action">
+           <div className="hero-buttons" style={{ marginTop: "40px", justifyContent: "center", gap: "20px" }}>
 
-            <Link to="/" className="home-btn">
-              🏠 Back to Home
-            </Link>
+  <Link to="/Dashboard" className="secondary-btn">
+    ⬅ Back Dashboard
+  </Link>
 
-          </div>
+  <Link to="/skills" className="primary-btn">
+    Next Page ➜ Skills
+  </Link>
 
-
+   </div>
         </div>
 
       </div>

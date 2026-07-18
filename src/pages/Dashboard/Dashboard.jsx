@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import profile from "../../assets/profile.png";
 import "./Dashboard.css";
 
 function Dashboard() {
+ const navigate = useNavigate();
   return (
     <section className="dashboard">
 
       <div className="dashboard-container">
 
         {/* Hero Section */}
+        
 
         <div className="dashboard-hero">
 
@@ -47,9 +50,16 @@ function Dashboard() {
 
 
           <div className="profile-circle">
+            <div className="profile-section">
 
-            <div>
-              👨‍💻
+         
+          <div className="profile-border">
+
+            <img src={profile} alt="Profile" />
+
+          </div>
+
+            
             </div>
 
           </div>
@@ -201,7 +211,18 @@ function Dashboard() {
 
         </div>
 
+      {/* Navigation Buttons */}
 
+        <div className="hero-buttons" style={{ marginTop: "40px", justifyContent: "center", gap: "20px" }}>
+
+  <Link to="/" className="secondary-btn">
+    ⬅ Back Home
+  </Link>
+
+  <Link to="/about" className="primary-btn">
+    Next Page ➜ About
+  </Link>
+        </div>
 
       </div>
 

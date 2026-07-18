@@ -320,12 +320,22 @@ return (
 🚀 My Projects
 </h1>
 
+{/* <div className="hero-buttons" style={{ marginTop: "40px", justifyContent: "center" }}> */}
 
-<button onClick={()=>navigate("/")}>
-🏠 Home
-</button>
+  <button
+    className="secondary-btn"
+    onClick={() => navigate("/skills")}
+  >
+    ⬅ Back Skills
+  </button>
 
-
+  <button
+    className="primary-btn"
+    onClick={() => navigate("/experience")}
+  >
+    Next Page ➜ Experience
+  </button>
+  
 </header>
 
 

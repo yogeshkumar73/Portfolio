@@ -20,7 +20,7 @@ function Skills() {
     {
       title: "Database",
       icon: "🗄️",
-      items: ["MySQL", "Database Management System", "SQL Queries"],
+      items: ["MySQL","MongoDB", "Database Management System", "SQL Queries"],
     },
     {
       title: "AI & Machine Learning",
@@ -121,9 +121,19 @@ function Skills() {
 
   return (
     <div className="skills-page">
-      <button className="back-btn" onClick={() => navigate("/")}>
-        ← Back To Home
-      </button>
+     <button
+    className="secondary-btn"
+    onClick={() => navigate("/About")}
+  >
+    ⬅ Back about
+  </button>
+
+  <button
+    className="primary-btn"
+    onClick={() => navigate("/projects")}
+  >
+    Next Page ➜ Projects
+  </button>
 
       {/* Technical Skills */}
       <section className="skills-header">

@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import "./Education.css";
 
 function Education() {
+  const navigate=useNavigate();
   return (
     <section className="education">
       <div className="education-container">
@@ -130,10 +131,23 @@ function Education() {
           </div>
         </div>
 
-        <div className="education-btn">
-          <Link to="/" className="home-btn">
-            ← Back to Home
-          </Link>
+       {/* Navigation Buttons */}
+
+<div className="hero-buttons" style={{ marginTop: "40px", justifyContent: "center" }}>
+
+  <button
+    className="secondary-btn"
+    onClick={() => navigate("/experience")}
+  >
+    ⬅ Back Experience
+  </button>
+
+  <button
+    className="primary-btn"
+    onClick={() => navigate("/resume")}
+  >
+    Next Page ➜ Resume
+  </button>
         </div>
       </div>
     </section>

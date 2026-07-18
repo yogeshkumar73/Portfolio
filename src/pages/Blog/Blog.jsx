@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Blog.css";
 
 function Blog() {
+  const navigate=useNavigate();
   const blogs = [
     {
       title: "My Journey into Software Development",
@@ -116,11 +117,24 @@ function Blog() {
 
 
 
-        <div className="blog-button">
+        {/* <div className="blog-button"> */}
 
-          <Link to="/" className="home-btn">
-            🏠 Back to Home
-          </Link>
+          <div className="blog-button" style={{ marginTop: "40px", justifyContent: "center" }}>
+
+  <button
+    className="secondary-btn"
+    onClick={() => navigate("/resume")}
+  >
+    ⬅ Back Resume
+  </button>
+
+  <button
+    className="primary-btn"
+    onClick={() => navigate("/contact")}
+  >
+    Next Page ➜ Contact
+  </button>
+
 
         </div>
 

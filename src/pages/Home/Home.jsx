@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import VisitorCounter from "./VisitorCounter";
 import ProjectRotator from "./ProjectRotator";
+import profile from "../../assets/profile.png";
 import "./home.css";
 
 const CARD_WIDTH = 320;
@@ -49,28 +50,23 @@ function Home() {
 
 
 //   // Visitor Counter API
-//   useEffect(() => {
-//     const fetchVisitorCount = async () => {
-//       try {
-//         const response = await fetch(
-//           "https://api.countapi.xyz/hit/yogesh-portfolio/home"
-//         );
+ const [visitorBadge, setVisitorBadge] = useState("");
 
-//         const data = await response.json();
 
-//         setVisitorCount(data.value);
+useEffect(() => {
 
-//       } catch (error) {
-//         console.error(
-//           "Visitor counter error:",
-//           error
-//         );
-//       }
-//     };
+  const url =
+    encodeURIComponent(
+      "https://github.com/yogeshkumar73/portfolio"
+    );
 
-//     fetchVisitorCount();
 
-//   }, []);
+  setVisitorBadge(
+    `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${url}`
+  );
+
+
+}, []);
 
 
   const handleNavigate = useCallback(
@@ -83,55 +79,70 @@ function Home() {
 
   const pages = useMemo(
     () => [
-      {
-        id: "projects",
-        title: "Projects",
-        icon: "🚀",
-        path: "/projects",
-        desc: "AI, Machine Learning and Full Stack applications",
-      },
-      {
-        id: "resume",
-        title: "Resume",
-        icon: "📄",
-        path: "/resume",
-        desc: "Professional profile, skills and achievements",
-      },
-      {
-        id: "skills",
-        title: "Skills",
-        icon: "⚡",
-        path: "/skills",
-        desc: "Programming languages and technical expertise",
-      },
-      {
-        id: "experience",
-        title: "Experience",
-        icon: "💼",
-        path: "/experiences",
-        desc: "Development experience and learning journey",
-      },
-      {
-        id: "education",
-        title: "Education",
-        icon: "🎓",
-        path: "/education",
-        desc: "Academic background and certifications",
-      },
-      {
-        id: "blog",
-        title: "Blog",
-        icon: "✍️",
-        path: "/blog",
-        desc: "Technical articles and learning updates",
-      },
-      {
-        id: "contact",
-        title: "Contact",
-        icon: "📩",
-        path: "/contact",
-        desc: "Connect for collaboration and opportunities",
-      },
+     {
+    id: "dashboard",
+    title: "Dashboard",
+    icon: "🏠",
+    path: "/dashboard",
+    desc: "Welcome to your dashboard! Manage your portfolio.",
+  },
+  {
+    id: "about",
+    title: "About",
+    icon: "👤",
+    path: "/about",
+    desc: "Learn more about me, my background, and my journey.",
+  },
+  {
+    id: "skills",
+    title: "Skills",
+    icon: "⚡",
+    path: "/skills",
+    desc: "Programming languages, frameworks, and technical expertise.",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+    icon: "🚀",
+    path: "/projects",
+    desc: "AI, Machine Learning, and Full Stack development projects.",
+  },
+  {
+    id: "experience",
+    title: "Experience",
+    icon: "💼",
+    path: "/experience",
+    desc: "Professional experience, internships, and development journey.",
+  },
+  {
+    id: "education",
+    title: "Education",
+    icon: "🎓",
+    path: "/education",
+    desc: "Academic qualifications, certifications, and achievements.",
+  },
+  {
+    id: "resume",
+    title: "Resume",
+    icon: "📄",
+    path: "/resume",
+    desc: "View or download my professional resume.",
+  },
+  {
+    id: "blog",
+    title: "Blog",
+    icon: "✍️",
+    path: "/blog",
+    desc: "Technical articles, tutorials, and learning insights.",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+    icon: "📩",
+    path: "/contact",
+    desc: "Let's connect for opportunities and collaborations."
+  },
+      
     ],
     []
   );
@@ -146,7 +157,7 @@ function Home() {
 <div className="hero-content">
 
    <h1> Working Projects links</h1>
-   
+
 
  <ProjectRotator />
 
@@ -156,7 +167,15 @@ function Home() {
             👋 Hello, I'm
         </p>
 
-        <VisitorCounter />
+        {
+  visitorBadge && (
+    <img
+      src={visitorBadge}
+      alt="Visitors"
+      className="visitor-badge"
+    />
+  )
+}
 
     </div>
 
@@ -241,17 +260,9 @@ function Home() {
         <div className="profile-section">
 
          
-
           <div className="profile-border">
 
-            <img
-              src="https://i.ibb.co/MykSXvPY/yogesh-profile.png"
-              alt="Yogesh Kumar"
-              className="profile-image"
-              loading="lazy"
-              decoding="async"
-              draggable="false"
-            />
+            <img src={profile} alt="Profile" />
 
           </div>
 

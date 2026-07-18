@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Experience.css";
 
 
 function Experience() {
-
-
+const navigate = useNavigate();
     const technologies = [
         "React.js",
         "JavaScript",
@@ -372,39 +371,21 @@ function Experience() {
 
 
 
-                <div className="button-group">
+               <div className="hero-buttons" style={{ marginTop: "40px", justifyContent: "center" }}>
 
+  <button
+    className="secondary-btn"
+    onClick={() => navigate("/Projects")}
+  >
+    ⬅ Back Projects
+  </button>
 
-                    <Link
-
-                        to="/"
-
-                        className="home-btn"
-
-                    >
-
-                        🏠 Back To Home
-
-                    </Link>
-
-
-
-
-
-                    <Link
-
-                        to="/projects"
-
-                        className="project-btn"
-
-                    >
-
-                        🚀 View Projects
-
-                    </Link>
-
-
-
+  <button
+    className="primary-btn"
+    onClick={() => navigate("/education")}
+  >
+    Next Page ➜ Education
+  </button>
                 </div>
 
 
