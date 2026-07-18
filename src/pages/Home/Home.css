@@ -17,7 +17,30 @@ body{
 
 }
 
+.project-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(168, 85, 247);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
 
+.project-header span {
+    color: rgb(56, 189, 248);
+}
+
+.project-header.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-header.hide {
+    opacity: 0;
+    transform: translateY(-15px);
+}
 
 .home{
 
@@ -44,6 +67,7 @@ body{
     );
 
     overflow:hidden;
+    
 
 }
 

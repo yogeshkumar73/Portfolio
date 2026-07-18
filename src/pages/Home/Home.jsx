@@ -10,7 +10,7 @@ import { TypeAnimation } from "react-type-animation";
 import VisitorCounter from "./VisitorCounter";
 import ProjectRotator from "./ProjectRotator";
 import profile from "../../assets/profile.png";
-import "./home.css";
+import "./Home.css";
 
 const CARD_WIDTH = 320;
 const AUTO_SCROLL_TIME = 10000;
@@ -48,24 +48,16 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-
-//   // Visitor Counter API
- const [visitorBadge, setVisitorBadge] = useState("");
-
+const [visitorBadge, setVisitorBadge] = useState("");
 
 useEffect(() => {
-
-  const url =
-    encodeURIComponent(
-      "https://github.com/yogeshkumar73/portfolio"
-    );
-
+  const url = encodeURIComponent(
+    "https://github.com/yogeshkumar73/portfolio"
+  );
 
   setVisitorBadge(
     `https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${url}`
   );
-
-
 }, []);
 
 
@@ -167,16 +159,13 @@ useEffect(() => {
             👋 Hello, I'm
         </p>
 
-        {
-  visitorBadge && (
-    <img
-      src={visitorBadge}
-      alt="Visitors"
-      className="visitor-badge"
-    />
-  )
-}
-
+       {visitorBadge && (
+  <img
+    src={visitorBadge}
+    alt="Visitor Count"
+    className="visitor-badge"
+  />
+)}
     </div>
 
 
@@ -239,7 +228,7 @@ useEffect(() => {
 
           {/* Visitor Counter */}
 
-          {/* <div className="visitor-counter">
+          {/* { <div className="visitor-counter">
             👀 Visitors:{" "}
             <strong>
               {
@@ -248,7 +237,7 @@ useEffect(() => {
                   : "Loading..."
               }
             </strong>
-          </div> */}
+          </div> } */}
 
 
         </div>
