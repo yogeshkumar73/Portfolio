@@ -5,10 +5,10 @@ const projects = [
     name: "Exam Pattern Analyzer",
     link: "https://exampattern.netlify.app/",
   },
-  {
-    name: "College Management System",
-    link: "https://your-project-link.com",
-  },
+  // {
+  //   name: "College Management System",
+  //   link: "https://your-project-link.com",
+  // },
   {
     name: "Mcqs Genrater",
     link: "https://quizgenrater.netlify.app/",

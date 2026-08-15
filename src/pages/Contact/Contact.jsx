@@ -58,7 +58,7 @@ function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:yogeshkumar737@gmail.com"
+                href="mailto:yogeshkumar737930@gmail.com"
                 className="info-box"
                 aria-label="Send email to Yogesh Kumar"
               >
@@ -67,7 +67,7 @@ function Contact() {
 
                 <div>
                   <h3>Email</h3>
-                  <p>yogeshkumar737@gmail.com</p>
+                  <p>yogeshkumar737930@gmail.com</p>
                 </div>
 
               </a>
@@ -88,6 +88,24 @@ function Contact() {
                 <div>
                   <h3>GitHub</h3>
                   <p>github.com/yogeshkumar73</p>
+                </div>
+
+              </a>
+       
+        {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/yogesh737930/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="info-box"
+                aria-label="Visit LinkedIn Profile"
+              >
+
+                <span aria-hidden="true">💻</span>
+
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p>linkedin.com/in/yogeshkumar737930</p>
                 </div>
 
               </a>
@@ -164,7 +182,7 @@ function Contact() {
 
           {/* Email Feedback */}
           <a
-            href="mailto:yogeshkumar737@gmail.com?subject=Portfolio%20Feedback&body=Hello%20Yogesh,%0A%0AI%20would%20like%20to%20share%20my%20feedback:%0A%0A"
+            href="mailto:yogeshkumar737930@gmail.com?subject=Portfolio%20Feedback&body=Hello%20Yogesh,%0A%0AI%20would%20like%20to%20share%20my%20feedback:%0A%0A"
             className="email-btn"
             aria-label="Send Feedback via Email"
           >
